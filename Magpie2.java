@@ -16,7 +16,7 @@ public class Magpie2 {
 	 * @return a greeting
 	 */
 	public String getGreeting() {
-		return "Hello, let's talk.";
+		return "What's boppin  jimbo?";
 	}
 
 	/**
@@ -30,24 +30,44 @@ public class Magpie2 {
 		String response = "";
 		if (statement.indexOf("no") >= 0) {
 			response = "Why so negative?";
-		} else if (statement.indexOf("mother") >= 0
-				   || statement.indexOf("father") >= 0
-				   || statement.indexOf("sister") >= 0
-				   || statement.indexOf("brother") >= 0)
+		} else if (statement.indexOf("Smith") >= 0
+				   || statement.indexOf("Olson") >= 0
+				   || statement.indexOf("Marshall") >= 0
+				   || statement.indexOf("McLaughlin") >= 0
+					 || statement.indexOf("Vandenberg") >= 0
+					 || statement.indexOf("VanTreese") >= 0)
 		{
-			response = "Tell me more about your family.";
+			response = "Did you mean the Wolf Pack?";
+		} else if (statement.indexOf("Oh") >= 0
+					 || statement.indexOf("called") >= 0
+					 || statement.indexOf("really") >= 0
+					 || statement.indexOf("groupchat") >= 0
+					 || statement.indexOf("hm") >= 0
+					 || statement.indexOf("wow") >= 0)
+		{
+			response = "Yes, they're the intellectuals of Berkeley";
+		} else if (statement.indexOf("What") >= 0
+					 || statement.indexOf("do") >= 0
+					 || statement.indexOf("you") >= 0
+					 || statement.indexOf("mean") >= 0
+					 || statement.indexOf("ok") >= 0
+					 || statement.indexOf("what") >= 0)
+		{
+			response = "Each one has his own specialization. With their combined knowledge, they are experts on the workings of the world.";
 		} else {
 			response = getRandomResponse();
 		}
 		return response;
 	}
 
+
+
 	/**
 	 * Pick a default response to use if nothing else fits.
 	 * @return a non-committal string
 	 */
 	private String getRandomResponse() {
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -60,8 +80,11 @@ public class Magpie2 {
 			response = "Do you really think so?";
 		} else if (whichResponse == 3) {
 			response = "You don't say.";
-		}
-
+		} else if (whichResponse == 4) {
+			response = "Lorenzo talks a ton";
+		} else if (whichResponse == 5) {
+			response = "Mr. Smith = Goat";
+}
 		return response;
 	}
 }
